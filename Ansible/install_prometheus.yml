@@ -1,0 +1,26 @@
+- name: Install prometheus
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Install Prometheus
+      apt:
+        name: prometheus
+        state: present
+
+    - name: Create Prometheus configuration directory
+      file:
+        path: /etc/prometheus
+        state: directory
+
+    - name: Copy Prometheus configuration file
+      copy:
+        src: /etc/prometheus.yml  
+        dest: /etc/prometheus/prometheus.yml
+        mode: 0644 
+
+    - name: Start Prometheus service
+      service:
+        name: prometheus
+        state: started
+        enabled: yes
