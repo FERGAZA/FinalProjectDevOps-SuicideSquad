@@ -1,0 +1,28 @@
+
+trigger:
+- main
+
+variables:
+  buildConfiguration: 'Release'
+
+steps:
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: '.'
+    includeRootFolder: false
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    replaceExistingArchive: true
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'web'
+    publishLocation: 'Container'
+
+- task: AzureStaticWebApp@0
+  inputs:
+    app_location: '/'
+    skip_app_build: true
+    skip_api_build: true
+    azure_static_web_apps_api_token: 'xxxxxxxxxxxxxxxxxxxxxxxxxxx'
+# In azure static web app api token we need to go to Azure Portal, copy and paste the token.
