@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: devopsproject
+  name: front-deploy
+  labels:
+    app: front
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: front
+  template:
+    metadata:
+      name: front
+      labels:
+        app: front
+    spec:
+      containers:
+        - name: front
+          image: aheroine/devopsproject:ui
+          ports:
+            - containerPort: 80
+          env:
+          - name: API_URL
+            value: "http://4.232.168.217:8080/"

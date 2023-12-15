@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: back-deploy
+  namespace: devopsproject
+  labels:
+    app: back
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: back
+  template:
+    metadata:
+      name: back
+      labels:
+        app: back
+    spec:
+      containers:
+        - name: back
+          image: aheroine/devopsproject:api
+          ports:
+            - containerPort: 8080
