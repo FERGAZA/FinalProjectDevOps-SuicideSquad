@@ -7,7 +7,13 @@
 2. Creating ansible folder
 
   mkdir ansible_workspace
+
+  # Add hosts and their connections
   nano hosts
+
+  # Adding an inventory for hosts
+  nano ansible.cfg
+  
   ansible all --list-hosts
 
 3. Creating Prometheus and Grafana Playbooks
@@ -25,4 +31,4 @@
   ansible-playbook install_grafana.yml
 
   # We check if it has been installed correctly
-  systemctl status grafana-serve
+  systemctl status grafana-server
