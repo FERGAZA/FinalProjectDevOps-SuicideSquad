@@ -15,9 +15,9 @@
 
 * After cloning the repositories and installing docker docker.io and docker-compose, we created the images used as a template to create the docker containers inside our VM:
 
- ![Alternate_Text].(images/Captura de pantalla 2023-12-15 111648.png)
+ ![Alternate_Text].(../images/Captura de pantalla 2023-12-15 111648.png)
 
- ![Alternate_Text].(images/Captura de pantalla 2023-12-15 111724.png)
+ ![Alternate_Text].(../images/Captura de pantalla 2023-12-15 111724.png)
 
 docker build -t .
    69  docker build -t api .
