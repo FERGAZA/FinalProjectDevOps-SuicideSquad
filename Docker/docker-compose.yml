@@ -1,0 +1,44 @@
+version: "3"
+
+services:
+  postgresql:
+    image: postgres
+    restart: always
+    container_name: postgres-container
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: basic3tier_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin123
+    networks:
+      - back-end
+
+  backend:
+    image: api
+    build: ./Basic3Tier.API
+    container_name: api-container
+    ports:
+      - "8080:80"
+    networks:
+      - back-end
+
+  frontend:
+    image: ui
+    build: 
+      context: ./Basic3Tier.UI
+      dockerfile:  Dockerfile
+    restart: always
+    volumes: 
+      - ./Basic3Tier.UI/configs/config.json:/usr/share/nginx/html/configs/config.json
+    container_name: ui-container
+    ports:
+      - "80:80"
+    networks:
+      - front-end
+
+networks:
+  back-end:
+    driver: bridge
+  front-end:
+    driver: bridge
