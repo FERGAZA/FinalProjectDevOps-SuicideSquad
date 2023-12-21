@@ -33,4 +33,6 @@
 
 6. Check Docker images:
     - `docker images`
-7. Push the images to our Dockerhub repo to save it in case we need them in other projects 
+7. Push the images to our Dockerhub repo to save it in case we need them in other projects
+
+   ![Alternate_Text](./images/99029aa4-a4e7-4e39-878f-9c073966fbad.png)
