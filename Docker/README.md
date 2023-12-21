@@ -36,3 +36,8 @@
 7. Push the images to our Dockerhub repo to save it in case we need them in other projects
 
    ![Alternate_Text](./images/99029aa4-a4e7-4e39-878f-9c073966fbad.png)
+
+8. To make sure the connection to the database is correct yo have to check ther config.json file inside the app. You should see a connection string configuration specified for the database. If the connection is still not working, check the configuration string as much as needed, making sure that the host is your postgres-container, the port is 5432 and the database, user and password are correct. After checking this, delete and create once again the image of your backend and run the correspondent Dockerfile to create the container.
+
+   ![Alternate_Text](./images/Captura%20de%20pantalla%202023-12-15%20111805.png)
+   ![Alternate_Text](./images/Captura%20de%20pantalla%202023-12-15%20111834.png)
