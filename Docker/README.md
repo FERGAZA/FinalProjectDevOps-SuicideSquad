@@ -41,3 +41,8 @@
 
    ![Alternate_Text](./images/Captura%20de%20pantalla%202023-12-15%20111805.png)
    ![Alternate_Text](./images/Captura%20de%20pantalla%202023-12-15%20111834.png)
+
+9. Lastly, instead of doing the whole process commented here manually, creating the two Docker images and pulling the postgres image followed by running containers. you can make everything at once to make everything more scalable, fast and simple. This is done through the docker-compose file configuratioon shown below and the following command:
+
+    -`docker-compose up -d`
+   ![Alternate_Text](./images/Captura%20de%20pantalla%202023-12-15%20111927.png)
