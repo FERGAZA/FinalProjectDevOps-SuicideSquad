@@ -22,11 +22,11 @@
     - ***Saurabh Dhingra***
 - Scrum Master: 
     - ***Fernando García***
-- Development Team: 
-    - ***Fernando García***
-    - ***Fernando Durbán***
-    - ***Anna Soriano***
-    - ***Ibai Gallego***
+- Development Team: ***Suicide Squad***
+    - ***Fernando García - Harley Quinn***
+    - ***Fernando Durbán - Peacemaker***
+    - ***Anna Soriano - Polka Dot***
+    - ***Ibai Gallego - Weasel***
 
 ## The Assignment:
 
